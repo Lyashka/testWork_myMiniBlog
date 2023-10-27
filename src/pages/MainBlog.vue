@@ -3,7 +3,7 @@
     <FormAddRecordVue v-show="userBlog.isVisibleFormAddRecord" />
     <header class="main_container_header">
       <label>Записи</label>
-      <button @click="crateRecord">Добавить</button>
+      <button class="btn_add_record" @click="crateRecord">Добавить</button>
     </header>
     <div v-if="this.userBlog.userRecords.length !== 0">
       <div v-for="(record, index) in userBlog.userRecords" :key="record.id">
@@ -63,5 +63,17 @@ export default {
   padding: 0 1vh;
   font-size: 2vh;
   border-bottom: 1px solid black;
+}
+.btn_add_record {
+  border: none;
+  background: none;
+  font-size: 2vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 1vh 0;
+  padding: 0 2vh;
+}
+.btn_add_record:hover {
+  background-color: rgb(206, 232, 255);
 }
 </style>
